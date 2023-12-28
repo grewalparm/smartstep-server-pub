@@ -33,7 +33,7 @@ export class AiTutorServerStack extends cdk.Stack {
       handler: "getQuestionHandler",
       entry: "lambdas/openAPILambdaFunction.ts",
       environment: {
-        OPENAI_API_KEY: "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",
+        OPENAI_API_KEY: "",//REMOVED FOR SECURITY PURPOSES. WILL BE MOVING THIS TO AWS SECRETS MANAGER SOON
       },
       timeout: cdk.Duration.millis(10000),
     });
@@ -46,7 +46,7 @@ export class AiTutorServerStack extends cdk.Stack {
         handler: "getChatCompletionHandler",
         entry: "lambdas/openAPILambdaFunction.ts",
         environment: {
-          OPENAI_API_KEY: "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",
+          OPENAI_API_KEY: "",//REMOVED FOR SECURITY PURPOSES. WILL BE MOVING THIS TO AWS SECRETS MANAGER SOON
         },
         timeout: cdk.Duration.millis(10000),
       }
